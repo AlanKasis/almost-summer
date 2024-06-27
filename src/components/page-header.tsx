@@ -3,11 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, Package2 } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 type Props = {};
@@ -26,7 +22,7 @@ const PageHeader = (props: Props) => {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right">
+        <SheetContent side="right" className="">
           <nav className="grid gap-6 text-lg font-medium">
             <Link
               href="/"
@@ -37,47 +33,49 @@ const PageHeader = (props: Props) => {
             </Link>
             <Link
               href="/info"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-muted-foreground"
             >
               Info
             </Link>
             <Link
               href="/creative"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-muted-foreground"
             >
               Creative Production
             </Link>
             <Link
               href="/talent"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-muted-foreground"
             >
               Talent Management
             </Link>
             <Link
-              href="/investments"
-              className="text-muted-foreground hover:text-foreground"
+              href="/ventures"
+              className="text-foreground hover:text-muted-foreground"
             >
-              Investments
+              Ventures
             </Link>
+          </nav>
+          <div className="w-full flex items-center justify-evenly absolute bottom-0 h-16">
             <Link
               href="mailto:example@gmail.com"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-muted-foreground"
             >
               Contact
             </Link>
             <Link
               href="#"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-foreground"
             >
               Instagram
             </Link>
             <Link
               href="#"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-muted-foreground"
             >
               Twitter
             </Link>
-          </nav>
+          </div>
         </SheetContent>
       </Sheet>
     </header>

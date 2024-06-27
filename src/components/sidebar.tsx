@@ -6,13 +6,13 @@ type SidebarProps = {};
 const Sidebar = (props: SidebarProps) => {
   return (
     <nav
-      className="grid gap-8 text-2xl text-muted-foreground font-medium"
+      className="grid gap-8 text-2xl font-medium"
       x-chunk="dashboard-04-chunk-0"
     >
-      <Link href="/info">Info</Link>
-      <Link href="/creative">Creative Production</Link>
-      <Link href="/talent">Talent Management</Link>
-      <Link href="/investments">Investments</Link>
+      <Link href="/info" className="text-foreground hover:text-muted-foreground">Info</Link>
+      <Link href="/creative" className="text-foreground hover:text-muted-foreground">Creative Production</Link>
+      <Link href="/talent" className="text-foreground hover:text-muted-foreground">Talent Management</Link>
+      <Link href="/ventures" className="text-foreground hover:text-muted-foreground">Ventures</Link>
     </nav>
   );
 };
