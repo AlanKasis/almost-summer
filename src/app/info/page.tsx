@@ -1,12 +1,23 @@
-import PageContent from '@/components/page-content'
-import React from 'react'
+import PageContent from "@/components/page-content";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Info = (props: Props) => {
   return (
-    <PageContent title="P001 -> Info" description={<>Almost Summer is a creative agency and talent management company. <br /><br />Our initiatives span industries, incluiding entertainment, film, fashion, technology, sports and philantropy.</>} />
-  )
-}
+    <PageContent
+      title="P001 -> Info"
+      description={
+        <>
+          Almost Summer is a creative production and talent management company.
+          <br />
+          <br />
+          Our initiatives span industries, including entertainment, film,
+          fashion, technology, sports, and philanthropy.
+        </>
+      }
+    />
+  );
+};
 
-export default Info
+export default Info;

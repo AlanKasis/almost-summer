@@ -6,6 +6,14 @@ import PageHeader from "@/components/page-header";
 import Sidebar from "@/components/sidebar";
 import PageFooter from "@/components/page-footer";
 import CarouselPage from "@/components/carousel-page";
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `app`
+const helveticaNeue = localFont({
+  src: '../../public/fonts/HelveticaNeueMedium.ttf',
+  display: 'swap',
+  variable: '--font-helvetica-neue'
+})
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,8 +34,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-h-screen",
-          fontSans.variable
+          "min-h-screen bg-background font-mono antialiased max-h-screen",
+          helveticaNeue.variable
         )}
       >
         <CarouselPage />

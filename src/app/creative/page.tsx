@@ -5,7 +5,7 @@ type Props = {}
 
 const Creative = (props: Props) => {
   return (
-    <PageContent title="P002 -> Creative" description={<>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, quidem minima harum iure consequatur illo debitis rerum aliquam distinctio iste at perspiciatis aspernatur nulla nam? Qui nobis rerum atque placeat.</>} />
+    <PageContent title="P002 -> Creative" description={<>Almost Summer manages and creates projects, partnerships, and campaigns across various sectors.</>} />
   )
 }
 

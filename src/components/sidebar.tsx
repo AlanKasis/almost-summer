@@ -13,6 +13,7 @@ const Sidebar = (props: SidebarProps) => {
       <Link href="/creative" className="text-foreground hover:text-muted-foreground">Creative Production</Link>
       <Link href="/talent" className="text-foreground hover:text-muted-foreground">Talent Management</Link>
       <Link href="/ventures" className="text-foreground hover:text-muted-foreground">Ventures</Link>
+      <Link href="/contact" className="text-foreground hover:text-muted-foreground">Contact</Link>
     </nav>
   );
 };

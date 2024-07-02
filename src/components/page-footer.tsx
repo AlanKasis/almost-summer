@@ -5,24 +5,15 @@ type PageFooterProps = {};
 
 const PageFooter = (props: PageFooterProps) => {
   return (
-    <footer className="hidden md:flex px-6 h-16 text-lg font-medium gap-8">
+    <footer className="hidden md:flex px-6 h-16 text-lg w-full justify-between font-medium gap-8">
       <Link
-        href="mailto:example@gmail.com"
+        href="hello@almostsummer.com"
         className="text-foreground hover:text-muted-foreground"
       >
-        Contact
+        hello@almostsummer.com
       </Link>
-      <Link
-        href="#"
-        className="text-foreground hover:text-muted-foreground"
-      >
+      <Link href="#" className="text-foreground hover:text-foreground">
         Instagram
-      </Link>
-      <Link
-        href="#"
-        className="text-foreground hover:text-muted-foreground"
-      >
-        Twitter
       </Link>
     </footer>
   );
