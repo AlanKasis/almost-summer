@@ -7,7 +7,7 @@ type CarouselPageProps = {};
 
 const CarouselPage = (props: CarouselPageProps) => {
   const onArrowClick = () => {
-    scrollBy({top:window.innerHeight, behavior: "smooth"});
+    scrollBy({top: 10000, behavior: "smooth"});
   };
   
   return (
