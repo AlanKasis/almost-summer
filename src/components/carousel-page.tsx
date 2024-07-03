@@ -31,24 +31,30 @@ const CarouselPage = (props: CarouselPageProps) => {
             <Image
               src="/images/1.jpeg"
               alt="First carousel image"
-              height={window.innerHeight}
-              width={window.innerWidth}
+              height={0}
+              width={0}
+              sizes="100vw"
+              className="h-auto w-full"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               src="/images/3.jpeg"
               alt="Second carousel image"
-              height={window.innerHeight}
-              width={window.innerWidth}
+              height={0}
+              width={0}
+              sizes="100vw"
+              className="h-auto w-full"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               src="/images/4.jpg"
               alt="Third carousel image"
-              height={window.innerHeight}
-              width={window.innerWidth}
+              height={0}
+              width={0}
+              sizes="100vw"
+              className="h-auto w-full"
             />
           </CarouselItem>
         </CarouselContent>
