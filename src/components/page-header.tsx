@@ -13,15 +13,15 @@ const PageHeader = (props: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname = usePathname()
   
-  
+
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
 
   return (
-    <header className="sticky md:static top-0 flex h-16 md:h-52 items-center gap-4 bg-background justify-end px-4 md:px-6">
+    <header className="sticky md:static top-0 flex h-16 md:h-44 items-center gap-4 bg-background justify-end px-4 md:px-6">
       <div className="hidden md:flex h-full w-full items-center justify-start border-b-2 border-black">
-        <span className="text-3xl font-medium">Almost Summer</span>
+        <span className="mt-12 text-3xl font-medium">Almost Summer</span>
       </div>
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
