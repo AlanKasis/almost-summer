@@ -26,42 +26,42 @@ const CarouselPage = (props: CarouselPageProps) => {
           loop: true,
         }}
       >
-        <CarouselContent className="h-screen">
-          <CarouselItem className="relative ">
+        <CarouselContent className="h-screen ml-0">
+          <CarouselItem className="relative pl-0">
             <Image
               src="/images/1.jpeg"
               alt="First carousel image"
               height={0}
               width={0}
               sizes="100vw"
-              className="h-auto w-full"
+              className="h-full w-auto object-cover md:h-auto md:w-full"
             />
           </CarouselItem>
-          <CarouselItem>
+          <CarouselItem className="relative pl-0">
             <Image
               src="/images/3.jpeg"
               alt="Second carousel image"
               height={0}
               width={0}
               sizes="100vw"
-              className="h-auto w-full"
+              className="h-full w-auto object-cover md:h-auto md:w-full"
             />
           </CarouselItem>
-          <CarouselItem>
+          <CarouselItem className="relative pl-0">
             <Image
               src="/images/4.jpg"
               alt="Third carousel image"
               height={0}
               width={0}
               sizes="100vw"
-              className="h-auto w-full"
+              className="h-full w-auto object-cover md:h-auto md:w-full"
             />
           </CarouselItem>
         </CarouselContent>
       </Carousel>
       <span className="text-4xl text-white z-10">Almost Summer</span>
       <ArrowDown
-        className="absolute bottom-10 animate-pulse border border-black rounded-full"
+        className="absolute bottom-10 animate-pulse border border-black rounded-full invert"
         onClick={onArrowClick}
       />
     </div>

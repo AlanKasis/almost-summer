@@ -65,7 +65,7 @@ const PageHeader = (props: Props) => {
           </nav>
           <div className="w-full flex items-center justify-evenly absolute bottom-0 h-16">
             <Link
-              href="hello@almostsummer.com"
+              href="mailto:hello@almostsummer.com"
               className="text-foreground hover:text-muted-foreground"
             >
               hello@almostsummer.com
