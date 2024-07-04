@@ -61,7 +61,7 @@ const CarouselPage = (props: CarouselPageProps) => {
       </Carousel>
       <span className="text-4xl text-white z-10">Almost Summer</span>
       <ArrowDown
-        className="absolute bottom-10 animate-pulse border border-black rounded-full invert"
+        className="absolute bottom-10 animate-pulse border border-black rounded-full invert cursor-pointer"
         onClick={onArrowClick}
       />
     </div>
