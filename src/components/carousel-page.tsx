@@ -23,7 +23,7 @@ const CarouselPage = (props: CarouselPageProps) => {
   const onArrowClick = () => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: 2000 },
+      scrollTo: { y: window.innerHeight * 1.5 },
       ease: "power2",
     });
   };
