@@ -24,6 +24,8 @@ const CarouselPage = (props: CarouselPageProps) => {
         className="h-full w-full bg-blue-100 absolute flex justify-center items-center"
         opts={{
           loop: true,
+          watchDrag: false,
+          duration: 30
         }}
       >
         <CarouselContent className="h-screen ml-0">
