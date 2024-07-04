@@ -40,8 +40,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-light antialiased max-h-screen",
-          helveticaNeueLight.variable
+          "min-h-screen bg-background font-mono antialiased max-h-screen",
+          helveticaNeue.variable
         )}
       >
         <CarouselPage />
