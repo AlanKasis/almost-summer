@@ -1,22 +1,39 @@
 "use client";
 
 import { ArrowDown } from "lucide-react";
-import React, { MouseEventHandler, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import useScrollPosition from "../hooks/useScrollPosition";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 type CarouselPageProps = {};
 
 const CarouselPage = (props: CarouselPageProps) => {
+  const [hasScrolled, setHasScrolled] = useState<boolean>(false);
+  const scrollPosition = useScrollPosition();
+
   const onArrowClick = () => {
-    scrollBy({ top: 10000, behavior: "smooth" });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: window.innerHeight },
+      ease: "power2",
+    });
   };
+
+  useEffect(() => {
+    if (scrollPosition > 0 && !hasScrolled) {
+      setHasScrolled(true);
+      onArrowClick();
+    }
+  }, [scrollPosition, hasScrolled]);
 
   return (
     <div className="flex justify-center items-center h-screen w-full">
@@ -25,13 +42,14 @@ const CarouselPage = (props: CarouselPageProps) => {
         opts={{
           loop: true,
           watchDrag: false,
-          duration: 30
+          duration: 30,
         }}
       >
         <CarouselContent className="h-screen ml-0">
           <CarouselItem className="relative pl-0">
             <Image
               src="/images/1.jpeg"
+              priority
               alt="First carousel image"
               height={0}
               width={0}

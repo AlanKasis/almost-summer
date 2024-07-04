@@ -15,6 +15,12 @@ const helveticaNeue = localFont({
   variable: '--font-helvetica-neue'
 })
 
+const helveticaNeueLight = localFont({
+  src: '../../public/fonts/HelveticaNeueLight.ttf',
+  display: 'swap',
+  variable: '--font-helvetica-neue-light'
+})
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -34,8 +40,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-mono antialiased max-h-screen",
-          helveticaNeue.variable
+          "min-h-screen bg-background font-light antialiased max-h-screen",
+          helveticaNeueLight.variable
         )}
       >
         <CarouselPage />
