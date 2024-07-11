@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import PageContent from "../../components/page-content";
 import React from "react";
 
@@ -7,11 +6,7 @@ type Props = {};
 const Contact = (props: Props) => {
   return (
     <PageContent
-      title={
-        <div className="flex flex-wrap items-center">
-          P005 <ArrowRight className="mx-1" /> Contact
-        </div>
-      }
+      title={<div className="flex flex-wrap items-center">Contact</div>}
       description={
         <>
           Almost Summer inquiries:

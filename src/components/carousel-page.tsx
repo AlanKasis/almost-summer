@@ -18,6 +18,7 @@ type CarouselPageProps = {};
 
 const CarouselPage = (props: CarouselPageProps) => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
+  const [hasScrolledToBottom, setHasScrolledToBottom] = useState<boolean>(false);
   const scrollPosition = useScrollPosition();
 
   const onArrowClick = () => {
@@ -26,6 +27,10 @@ const CarouselPage = (props: CarouselPageProps) => {
       scrollTo: { y: window.innerHeight * 1.5 },
       ease: "power2",
     });
+    const timeout = setTimeout(() => {
+      setHasScrolledToBottom(true);
+    }, 1000)
+    return () => clearTimeout(timeout)
   };
 
   useEffect(() => {
@@ -36,9 +41,9 @@ const CarouselPage = (props: CarouselPageProps) => {
   }, [scrollPosition, hasScrolled]);
 
   return (
-    <div className="flex justify-center items-center h-screen w-full">
+    <div className={`${hasScrolledToBottom ? "hidden" : "flex"} md:flex justify-center items-center bg-blue-100 h-screen w-full`}>
       <Carousel
-        className="h-full w-full bg-blue-100 absolute flex justify-center items-center"
+        className="h-full w-full bg-blue-100 absolute flex justify-center hidden md:block items-center"
         opts={{
           loop: true,
           watchDrag: false,
@@ -46,7 +51,7 @@ const CarouselPage = (props: CarouselPageProps) => {
         }}
       >
         <CarouselContent className="h-screen ml-0">
-          <CarouselItem className="relative pl-0">
+          {/* <CarouselItem className="relative pl-0">
             <Image
               src="/images/1.jpeg"
               priority
@@ -66,7 +71,7 @@ const CarouselPage = (props: CarouselPageProps) => {
               sizes="100vw"
               className="h-full w-auto object-cover md:h-auto md:w-full"
             />
-          </CarouselItem>
+          </CarouselItem> */}
           <CarouselItem className="relative pl-0">
             <Image
               src="/images/4.jpg"
@@ -79,9 +84,10 @@ const CarouselPage = (props: CarouselPageProps) => {
           </CarouselItem>
         </CarouselContent>
       </Carousel>
-      <span className="text-4xl text-white z-10">Almost Summer</span>
+      <span className="hidden md:block text-4xl md:text-5xl p-2 z-10">Almost Summer</span>
+      <span className="md:hidden opacity-0 transition-opacity text-4xl md:text-5xl p-2 z-10 animate-[appear_1500ms_cubic-bezier(0.4,_0,_0.2,_1)_500ms_forwards]">Welcome</span>
       <ArrowDown
-        className="absolute bottom-10 animate-pulse border border-black rounded-full invert cursor-pointer"
+        className="absolute h-8 w-8 md:h-10 md:w-10 p-1 bottom-10 animate-pulse border border-black rounded-full cursor-pointer"
         onClick={onArrowClick}
       />
     </div>
