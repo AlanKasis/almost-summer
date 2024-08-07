@@ -9,7 +9,9 @@ const Talent = (props: Props) => {
       title={
         <div className="flex flex-wrap items-center">Talent Management</div>
       }
-      description={<>Almost Summer oversees and represents diverse talent.</>}
+      description={
+        <>Almost Summer oversees and represents diverse talent and creatives.</>
+      }
     />
   );
 };

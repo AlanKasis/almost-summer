@@ -7,12 +7,11 @@ const Creative = (props: Props) => {
   return (
     <PageContent
       title={
-        <div className="flex flex-wrap items-center">Creative Production</div>
+        <div className="flex flex-wrap items-center">Design + Creative Production</div>
       }
       description={
         <>
-          Almost Summer manages and creates projects, partnerships, and
-          campaigns across various sectors.
+          Almost Summer designs and executes projects and campaigns across various sectors.
         </>
       }
     />

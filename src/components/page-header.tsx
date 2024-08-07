@@ -48,7 +48,7 @@ const PageHeader = (props: Props) => {
               className={`${pathname == '/creative' ? "text-muted-foreground" : "text-foreground"}`}
               onClick={() => setIsOpen(false)}
             >
-              Creative Production
+              Design + Creative Production
             </Link>
             <Link
               href="/talent"
@@ -70,6 +70,13 @@ const PageHeader = (props: Props) => {
               onClick={() => setIsOpen(false)}
             >
               Investments
+            </Link>
+            <Link
+              href="/work"
+              className={`${pathname == '/work' ? "text-muted-foreground" : "text-foreground"}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Select Work
             </Link>
             <Link
               href="/contact"
