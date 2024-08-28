@@ -40,9 +40,11 @@ const CarouselPage = (props: CarouselPageProps) => {
     }
   }, [scrollPosition, hasScrolled]);
 
+  console.log(hasScrolledToBottom)
+
   return (
-    <div className={`${hasScrolledToBottom ? "hidden" : "flex"} md:flex justify-center items-center bg-blue-100 h-screen w-full`}>
-      <Carousel
+    <div className={`${hasScrolledToBottom ? "hidden" : "flex"} justify-center items-center bg-blue-100 h-screen w-full`}>
+      {/* <Carousel
         className="h-full w-full bg-blue-100 absolute flex justify-center hidden md:block items-center"
         opts={{
           loop: true,
@@ -51,7 +53,7 @@ const CarouselPage = (props: CarouselPageProps) => {
         }}
       >
         <CarouselContent className="h-screen ml-0">
-          {/* <CarouselItem className="relative pl-0">
+          <CarouselItem className="relative pl-0">
             <Image
               src="/images/1.jpeg"
               priority
@@ -71,7 +73,7 @@ const CarouselPage = (props: CarouselPageProps) => {
               sizes="100vw"
               className="h-full w-auto object-cover md:h-auto md:w-full"
             />
-          </CarouselItem> */}
+          </CarouselItem>
           <CarouselItem className="relative pl-0">
             <Image
               src="/images/4.jpg"
@@ -84,8 +86,8 @@ const CarouselPage = (props: CarouselPageProps) => {
           </CarouselItem>
         </CarouselContent>
       </Carousel>
-      <span className="hidden md:block text-4xl md:text-5xl p-2 z-10">Almost Summer</span>
-      <span className="md:hidden opacity-0 transition-opacity text-4xl md:text-5xl p-2 z-10 animate-[appear_1500ms_cubic-bezier(0.4,_0,_0.2,_1)_500ms_forwards]">Welcome</span>
+      <span className="hidden md:block text-4xl md:text-5xl p-2 z-10">Almost Summer</span> */}
+      <span className="opacity-0 transition-opacity text-4xl md:text-5xl p-2 z-10 animate-[appear_1500ms_cubic-bezier(0.4,_0,_0.2,_1)_500ms_forwards]">Welcome</span>
       <ArrowDown
         className="absolute h-8 w-8 md:h-10 md:w-10 p-1 bottom-10 animate-pulse border border-black rounded-full cursor-pointer"
         onClick={onArrowClick}
