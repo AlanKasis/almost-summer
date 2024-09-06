@@ -45,7 +45,7 @@ export default function RootLayout({
         )}
       >
         <CarouselPage />
-        <div className="h-screen md:px-20">
+        <div className="flex flex-column flex-wrap justify-between h-screen md:px-20">
           <PageHeader />
           <div className="flex min-h-screen w-full flex-col md:min-h-fit md:h-[calc(100vh-13rem-4rem)]">
             <main className="flex flex-col min-h-screen items-center justify-center p-8 md:min-h-fit md:p-6 md:grid md:grid-cols-2 md:h-full md:grid-rows-1">

@@ -3,12 +3,12 @@ import React from "react";
 
 type Props = {};
 
-const Investments = (props: Props) => {
+const SpecialProjects = (props: Props) => {
   return (
     <PageContent
       title={
         <div className="flex flex-wrap items-center">
-          Special Projects + Investments
+          Special Projects + Advisory
         </div>
       }
       description={
@@ -21,4 +21,4 @@ const Investments = (props: Props) => {
   );
 };
 
-export default Investments;
+export default SpecialProjects;

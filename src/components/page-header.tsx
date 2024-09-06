@@ -15,7 +15,7 @@ const PageHeader = (props: Props) => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky mb-[-4rem] md:mb-0 static top-0 flex h-16 md:h-44 items-center gap-4 bg-background justify-between  md:justify-end px-4 md:px-6">
+    <header className="sticky w-full mb-[-4rem] md:mb-0 static top-0 flex h-16 md:h-36 2xl:h-44 items-center gap-4 bg-background justify-between  md:justify-end px-4 md:px-6">
       <div className="hidden md:flex h-full w-full items-center justify-start border-b-2 md:border-0 border-black">
         <span className="mt-12 text-3xl font-medium">Almost Summer</span>
       </div>
@@ -65,11 +65,11 @@ const PageHeader = (props: Props) => {
               Film + Media
             </Link>
             <Link
-              href="/investments"
-              className={`${pathname == '/investments' ? "text-muted-foreground" : "text-foreground"}`}
+              href="/special-projects"
+              className={`${pathname == '/special-projects' ? "text-muted-foreground" : "text-foreground"}`}
               onClick={() => setIsOpen(false)}
             >
-              Investments
+              Special Projects + Advisory
             </Link>
             <Link
               href="/work"

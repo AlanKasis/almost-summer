@@ -10,7 +10,7 @@ const Work = (props: Props) => {
         <div className="flex flex-wrap items-center">Select Work</div>
       }
       description={
-        <>Almost Summer&apos;s select work provided <a href="https://drive.google.com/file/d/18JaBaMpY5nsTWqrP4Rcn4gm1HckX7u2T/view?usp=sharing" className="underline">here</a> </>
+        <>Almost Summer&apos;s select work provided <a href="https://drive.google.com/file/d/18JaBaMpY5nsTWqrP4Rcn4gm1HckX7u2T/view?usp=sharing" className="underline">here</a>.</>
       }
     />
   );
